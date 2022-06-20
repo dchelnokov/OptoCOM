@@ -2,16 +2,12 @@ import os
 import sys
 import time
 
-# needed only for correct freezing
 try:
     os.chdir(r'C:\Users\DXC\AppData\Roaming\Python\Python39\Scripts')
 except:
     pass
 import serial
 
-# tx_cmd sends a string cmd to the COM port descriptor stored in the handler object.
-# each command is terminated with the carriage return char.
-# returned is the response from the remote side as as python string.
 def tx_cmd(handler, cmd):
     feedback = ''
     try:
